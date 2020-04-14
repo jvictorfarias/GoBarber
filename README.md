@@ -10,9 +10,8 @@
 </div>
 </p>
 
-<div>
 
-# GoBarber
+## GoBarber
 
 Aplicativo para agendamentos de serviços de beleza(Em desenvolvimento).
 
@@ -23,4 +22,3 @@ This project é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENS
 
 <p align="center" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">Feito com ❤️ by <strong> Joao Victor Farias </p>
 
-</div>
