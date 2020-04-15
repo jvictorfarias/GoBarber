@@ -28,7 +28,7 @@ class AuthenticateUserService {
     // user.password = senha criptografada
 
     if (!(await compare(password, user.password))) {
-      throw Error('Incorrect Email/Password validation.');
+      throw new Error('Incorrect Email/Password validation.');
     }
 
     const token = sign({}, authConfig.secret, {

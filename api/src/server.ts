@@ -1,6 +1,8 @@
 import 'reflect-metadata';
+import 'dotenv';
 
 import express from 'express';
+import ora from 'ora';
 import routes from './routes';
 
 import './database';
@@ -11,5 +13,5 @@ app.use(express.json());
 app.use(routes);
 
 app.listen(3333, () => {
-  console.log('server started...');
+  ora('Server Running').succeed();
 });
