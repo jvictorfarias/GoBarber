@@ -1,0 +1,11 @@
+version: "3.1"
+
+services:
+  gobarber_db:
+    image: postgres
+    container_name: gobarber-pg
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+    ports:
+      - 5432:5432
