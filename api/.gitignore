@@ -2,3 +2,5 @@ node_modules
 dist
 .env
 auth.js
+tmp/*
+!tmp/.gitkeep
