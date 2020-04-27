@@ -1,12 +1,16 @@
+<div align="center" style="margin-bottom: 20px;">
+<img alt="gobarber" src="./img/logo.svg" width="500px" heigth="500px"/>
+
+
+</div>
+
 <div align="center">
-<img alt="gobarber" src="./img/logo.svg" style="margin:20px"/>
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jvictorfarias/gobarber/LICENSE.md)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jvictorfarias/gobarber?color=green)
 ![GitHub top language](https://img.shields.io/github/languages/top/jvictorfarias/gobarber)
 
 </div>
-
 
 ## :fire: Preview
 
