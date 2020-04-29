@@ -41,6 +41,10 @@ O projeto foi feito com as seguintes tecnologias:
 - [Styled-Components](https://styled-components.com/)
 {...}
 
+## :hammer: Deploy da Aplicação
+{...}
+
+
 ## :thinking: Como Contribuir?
 **Faça um fork deste repositório**
 
@@ -59,10 +63,6 @@ $ git push origin minha-branch
 ```
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
-
-
-## :hammer: Deploy da Aplicação
-{...}
 
 ## :zap: Executando o Projeto
 #### Clonando o projeto
