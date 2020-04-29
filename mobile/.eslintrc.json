@@ -32,6 +32,7 @@
         "no-unused-expressions":"off",
         "spaced-comment": "off",
         "react/prop-types":"off",
+        "@typescript-eslint/no-explicit-any":"off",
         "react/jsx-props-no-spreading":"off",
         "react/jsx-one-expression-per-line": "off",
         "react-hooks/rules-of-hooks": "error",
