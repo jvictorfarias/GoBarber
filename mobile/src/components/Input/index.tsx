@@ -31,7 +31,7 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = (
   const [isFilled, setIsFilled] = useState(false);
 
   const inputElementRef = useRef<any>(null);
-  const { fieldName, registerField, error, defaultValue } = useField(name);
+  const { fieldName, registerField, error, defaultValue = '' } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
 
   const handleInputFocus = useCallback(() => {
@@ -69,7 +69,7 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = (
   }));
 
   return (
-    <Container isFocused={isFocused}>
+    <Container isFocused={isFocused} isErrored={!!error}>
       <Icon
         name={icon}
         size={20}
