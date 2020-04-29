@@ -1,5 +1,5 @@
 <div align="center" style="margin-bottom: 20px;">
-<img alt="gobarber" src="./img/logo.svg" width="500px" heigth="500px"/>
+<img alt="gobarber" src="./img/logo.png" width="auto" heigth="auto"/>
 </div>
 
 <div align="center" style="margin: 20px;">
