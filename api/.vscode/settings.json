@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "database": "gostack",
+      "dialect": "PostgreSQL",
+      "name": "gostack databases",
+      "password": "docker",
+      "port": 5432,
+      "server": "localhost",
+      "username": "postgres"
+    }
+  ]
+}
