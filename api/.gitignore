@@ -4,3 +4,4 @@ dist
 auth.js
 tmp/*
 !tmp/.gitkeep
+coverage
