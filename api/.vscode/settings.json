@@ -8,6 +8,15 @@
       "port": 5432,
       "server": "localhost",
       "username": "postgres"
+    },
+    {
+      "database": "gobarber",
+      "dialect": "PostgreSQL",
+      "name": "gobarber",
+      "password": "docker",
+      "port": 5432,
+      "server": "localhost",
+      "username": "postgres"
     }
   ]
 }

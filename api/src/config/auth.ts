@@ -1,4 +1,4 @@
-interface AuthConfig {
+interface IAuthConfig {
   secret: string;
   expiresIn: string;
 }
@@ -6,4 +6,4 @@ interface AuthConfig {
 export default {
   secret: '07117fe4a1ebd544965dc19573183da2',
   expiresIn: '30d',
-} as AuthConfig;
+} as IAuthConfig;

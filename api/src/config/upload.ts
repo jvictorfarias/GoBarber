@@ -2,7 +2,7 @@ import path from 'path';
 import multer from 'multer';
 import crypto from 'crypto';
 
-const tmpFolder = path.resolve(__dirname, '..', '..', 'tmp');
+const tmpFolder = path.resolve(__dirname, '..', 'tmp');
 
 export default {
   directory: tmpFolder,

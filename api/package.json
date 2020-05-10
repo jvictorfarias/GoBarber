@@ -20,6 +20,7 @@
     "ora": "^4.0.3",
     "pg": "^8.0.2",
     "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.2.0",
     "typeorm": "^0.2.24",
     "uuidv4": "^6.0.7"
   },
