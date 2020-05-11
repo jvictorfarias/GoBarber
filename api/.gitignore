@@ -5,3 +5,4 @@ auth.js
 tmp/*
 !tmp/.gitkeep
 coverage
+requisitos.md
