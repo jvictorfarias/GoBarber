@@ -1,9 +1,11 @@
+import { AUTH_SECRET, TOKEN_EXPIRATION_TIME } from '../utils/environment';
+
 interface IAuthConfig {
   secret: string;
   expiresIn: string;
 }
 
 export default {
-  secret: process.env.APP_SECRET,
-  expiresIn: process.env.TOKEN_EXPIRATION_TIME,
+  secret: AUTH_SECRET,
+  expiresIn: TOKEN_EXPIRATION_TIME,
 } as IAuthConfig;
