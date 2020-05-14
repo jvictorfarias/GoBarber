@@ -77,6 +77,8 @@ $ cd api
 $ yarn && yarn typeorm migration:run
 ```
 
+<a href="https://insomnia.rest/run/?label=gobarber-jvictorfarias&uri=https%3A%2F%2Fgithub.com%2Fjvictorfarias%2FGoBarber%2Fblob%2Fmaster%2Fapi%2FInsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+
 #### Iniciando o Frontend
 ```sh
 $ cd web
