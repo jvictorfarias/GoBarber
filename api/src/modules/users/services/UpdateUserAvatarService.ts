@@ -9,6 +9,7 @@ interface IRequest {
   user_id: string;
   avatarFilename: string;
 }
+
 @injectable()
 class UpdateUserAvatarService {
   private usersRepository: IUsersRepository;

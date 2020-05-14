@@ -4,6 +4,6 @@ interface IAuthConfig {
 }
 
 export default {
-  secret: '07117fe4a1ebd544965dc19573183da2',
-  expiresIn: '30d',
+  secret: process.env.APP_SECRET,
+  expiresIn: process.env.TOKEN_EXPIRATION_TIME,
 } as IAuthConfig;
