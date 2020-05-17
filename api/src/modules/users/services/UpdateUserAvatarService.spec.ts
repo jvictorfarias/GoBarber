@@ -3,23 +3,29 @@ import FakeUsersRepository from '@modules/users/repositories/fakes/FakeUsersRepo
 import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 import AppError from '@shared/errors/AppError';
 
-describe('UpdateUserAvatar', () => {
-  it('should be able to upload a avatar file', async () => {
-    const fakeUsersRepository = new FakeUsersRepository();
-    const fakeStorageProvider = new FakeStorageProvider();
+let fakeStorageProvider: FakeStorageProvider;
+let fakeUsersRepository: FakeUsersRepository;
+let updateUserAvatarService: UpdateUserAvatarService;
 
-    const updateUserAvatar = new UpdateUserAvatarService(
+describe('UpdateUserAvatar', () => {
+  beforeEach(() => {
+    fakeStorageProvider = new FakeStorageProvider();
+    fakeUsersRepository = new FakeUsersRepository();
+
+    updateUserAvatarService = new UpdateUserAvatarService(
       fakeUsersRepository,
       fakeStorageProvider,
     );
+  });
 
+  it('should be able to upload a avatar file', async () => {
     const user = await fakeUsersRepository.create({
       name: 'John Doe',
       email: 'johndoe@example.com',
       password: '12345678',
     });
 
-    await updateUserAvatar.execute({
+    await updateUserAvatarService.execute({
       user_id: user.id,
       avatarFilename: 'avatar.jpg',
     });
@@ -28,16 +34,8 @@ describe('UpdateUserAvatar', () => {
   });
 
   it('should delete previous avatar on new upload', async () => {
-    const fakeUsersRepository = new FakeUsersRepository();
-    const fakeStorageProvider = new FakeStorageProvider();
-
     // Spy function
     const deleteFile = jest.spyOn(fakeStorageProvider, 'deleteFile');
-
-    const updateUserAvatar = new UpdateUserAvatarService(
-      fakeUsersRepository,
-      fakeStorageProvider,
-    );
 
     const user = await fakeUsersRepository.create({
       name: 'John Doe',
@@ -45,12 +43,12 @@ describe('UpdateUserAvatar', () => {
       password: '12345678',
     });
 
-    await updateUserAvatar.execute({
+    await updateUserAvatarService.execute({
       user_id: user.id,
       avatarFilename: 'avatar.jpg',
     });
 
-    await updateUserAvatar.execute({
+    await updateUserAvatarService.execute({
       user_id: user.id,
       avatarFilename: 'changedAvatar.jpg',
     });
@@ -60,16 +58,8 @@ describe('UpdateUserAvatar', () => {
   });
 
   it('should not be able to update avatar for non-existing user', async () => {
-    const fakeUsersRepository = new FakeUsersRepository();
-    const fakeStorageProvider = new FakeStorageProvider();
-
-    const updateUserAvatar = new UpdateUserAvatarService(
-      fakeUsersRepository,
-      fakeStorageProvider,
-    );
-
     await expect(
-      updateUserAvatar.execute({
+      updateUserAvatarService.execute({
         user_id: 'non-existing-user',
         avatarFilename: 'avatar.jpg',
       }),
