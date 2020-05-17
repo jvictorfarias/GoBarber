@@ -37,7 +37,7 @@ class EtherealMailProvider implements IMailProvider {
     subject,
     templateData,
   }: ISendMailDTO): Promise<void> {
-    await this.transporter.sendMail({
+    const message = await this.transporter.sendMail({
       from: {
         name: from?.name || 'Equipe GoBarber',
         address: from?.email || 'empresa@gobarber.com.br',
@@ -50,9 +50,8 @@ class EtherealMailProvider implements IMailProvider {
       html: await this.mailTemplateProvider.parse(templateData),
     });
 
-    // console.log('Message sent: %s', message.messageId);
-
-    // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(message));
+    console.log('Message sent: %s', message.messageId);
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(message));
   }
 }
 

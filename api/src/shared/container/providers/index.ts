@@ -14,13 +14,13 @@ container.registerSingleton<IStorageProvider>(
   DiskStorageProvider,
 );
 
-// Calling constructor on dependency register
-container.registerInstance<IMailProvider>(
-  'MailProvider',
-  new EtherealMailProvider(),
-);
-
 container.registerSingleton<IMailTemplateProvider>(
   'MailTemplateProvider',
   HandlebarsMailTemplateProvider,
+);
+
+// Calling constructor on dependency register
+container.registerInstance<IMailProvider>(
+  'MailProvider',
+  container.resolve(EtherealMailProvider),
 );
