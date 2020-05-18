@@ -33,7 +33,7 @@ app.use(
     }
 
     // eslint-disable-next-line no-console
-    console.log(error.message);
+    console.log(error);
 
     return response.status(500).json({
       status: 'error',
