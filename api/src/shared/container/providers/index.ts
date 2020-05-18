@@ -19,7 +19,7 @@ container.registerSingleton<IMailTemplateProvider>(
   HandlebarsMailTemplateProvider,
 );
 
-// Calling constructor on dependency register
+// Calling constructor after dependency register
 container.registerInstance<IMailProvider>(
   'MailProvider',
   container.resolve(EtherealMailProvider),
