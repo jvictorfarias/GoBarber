@@ -6,14 +6,16 @@
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jvictorfarias/gobarber/LICENSE.md)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jvictorfarias/gobarber?color=green&style=flat-square)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/30e0ef7a3c2146498723e53c9fcaeda7)](https://www.codacy.com/manual/jvictorfarias/GoBarber_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jvictorfarias/GoBarber&amp;utm_campaign=Badge_Grade)
 ![GitHub top language](https://img.shields.io/github/languages/top/jvictorfarias/gobarber?style=flat-square)
+
 
 <p align="center" >
   <a href="#fire-prévia-da-aplicação"> :fire: Prévia da Aplicação</a> |
   <a href="#rocket-tecnologias-usadas"> :rocket: Tecnologias Usadas</a> |
   <a href="#hammer-deploy-da-aplicação"> :hammer: Deploy da Aplicação</a> |
   <a href="#thinking-como-contribuir?"> :thinking: Como Contribuir?</a> |
-  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a> |
+  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a> 
 </p>
 
 </div>
