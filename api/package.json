@@ -18,6 +18,7 @@
     "express-async-errors": "^3.1.1",
     "handlebars": "^4.7.6",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.7",
     "multer": "^1.4.2",
     "nodemailer": "^6.4.6",
     "ora": "^4.0.3",
