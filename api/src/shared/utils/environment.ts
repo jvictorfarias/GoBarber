@@ -18,3 +18,4 @@ dotenv.config({ path });
 
 export const { AUTH_SECRET } = process.env;
 export const { TOKEN_EXPIRATION_TIME } = process.env;
+export const { APP_WEB_URL } = process.env;

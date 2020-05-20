@@ -1,4 +1,4 @@
-import { AUTH_SECRET, TOKEN_EXPIRATION_TIME } from '../utils/environment';
+import { AUTH_SECRET, TOKEN_EXPIRATION_TIME } from '@shared/utils/environment';
 
 interface IAuthConfig {
   secret: string;

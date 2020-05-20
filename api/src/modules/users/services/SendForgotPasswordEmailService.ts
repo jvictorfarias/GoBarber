@@ -1,4 +1,5 @@
 import path from 'path';
+import { APP_WEB_URL } from '@shared/utils/environment';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
 import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider';
@@ -52,7 +53,7 @@ class SendForgotPasswordEmailService {
         file: path.resolve(__dirname, '..', 'views', 'forgot_password.hbs'),
         variables: {
           name: user.name,
-          link: `http://localhost:3000/reset_password?token=${token}`,
+          link: `${APP_WEB_URL}/reset_password?token=${token}`,
         },
       },
     });
