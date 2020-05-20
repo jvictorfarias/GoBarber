@@ -18,12 +18,10 @@
     }
   },
   {
-    "name": "mongo",
+    "name": "mongodb",
     "type": "mongodb",
     "host": "localhost",
     "port": 27017,
-    "username": "root",
-    "password": "root",
     "database": "gobarber",
     "useUnifiedTopology": true,
     "entities": [
