@@ -1,4 +1,4 @@
-import { APP_API_URL } from '@shared/utils/environment';
+import { APP_API_URL, AWS_S3_BUCKET } from '@shared/utils/environment';
 import {
   Entity,
   Column,
@@ -41,7 +41,7 @@ class User {
       case 'disk':
         return `${APP_API_URL}/files/${this.avatar}`;
       case 's3':
-        return `https://gobarber-jvictorfarias.s3.amazonaws.com/${this.avatar}`;
+        return `https://${AWS_S3_BUCKET}.s3.amazonaws.com/${this.avatar}`;
       default:
         return null;
     }
