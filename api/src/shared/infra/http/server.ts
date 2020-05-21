@@ -1,5 +1,4 @@
 import 'reflect-metadata';
-import * as dotenv from 'dotenv';
 
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
@@ -12,8 +11,6 @@ import routes from './routes';
 
 import '@shared/infra/typeorm';
 import '@shared/container';
-
-dotenv.config({ path: '../../../../.env' });
 
 const app = express();
 
