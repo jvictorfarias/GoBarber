@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import aws, { S3 } from 'aws-sdk';
+import mime from 'mime';
 import uploadConfig from '@config/storage';
 import { AWS_S3_BUCKET } from '@shared/utils/environment';
+import AppError from '@shared/errors/AppError';
 import IStorageProvider from '../models/IStorageProvider';
 
 class S3StorageProvider implements IStorageProvider {
@@ -21,11 +23,18 @@ class S3StorageProvider implements IStorageProvider {
       encoding: null,
     });
 
+    const fileType = mime.getType(originalPath);
+
+    if (!fileType) {
+      throw new AppError('File does not exists');
+    }
+
     await this.client
       .putObject({
         Bucket: AWS_S3_BUCKET || 'gobarber-jvictorfarias',
         Key: file,
         ACL: 'public-read',
+        ContentType: fileType,
         Body: fileContent,
       })
       .promise();
@@ -34,15 +43,12 @@ class S3StorageProvider implements IStorageProvider {
   }
 
   public async deleteFile(file: string): Promise<void> {
-    const filePath = path.resolve(uploadConfig.uploadsFolder, file);
-
-    try {
-      await fs.promises.stat(filePath);
-    } catch (err) {
-      return;
-    }
-
-    await fs.promises.unlink(filePath);
+    await this.client
+      .deleteObject({
+        Bucket: AWS_S3_BUCKET || 'gobarber-jvictorfarias',
+        Key: file,
+      })
+      .promise();
   }
 }
 

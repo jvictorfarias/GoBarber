@@ -5,11 +5,10 @@ import crypto from 'crypto';
 
 interface IStorageConfig {
   driver: 's3' | 'disk';
-
-  config: {
-    disk: {
-      storage: StorageEngine;
-    };
+  tmpFolder: string;
+  uploadsFolder: string;
+  multer: {
+    storage: StorageEngine;
   };
 }
 
@@ -19,17 +18,16 @@ export default {
   driver: STORAGE_DRIVER,
   tmpFolder,
   uploadsFolder: path.resolve(tmpFolder, 'uploads'),
-  config: {
-    disk: {
-      storage: multer.diskStorage({
-        destination: tmpFolder,
-        filename(request, file, callback) {
-          const fileHash = crypto.randomBytes(16).toString('hex');
-          const fileName = `${fileHash}-${file.originalname}`;
 
-          return callback(null, fileName);
-        },
-      }),
-    },
+  multer: {
+    storage: multer.diskStorage({
+      destination: tmpFolder,
+      filename(request, file, callback) {
+        const fileHash = crypto.randomBytes(16).toString('hex');
+        const fileName = `${fileHash}-${file.originalname}`;
+
+        return callback(null, fileName);
+      },
+    }),
   },
 } as IStorageConfig;

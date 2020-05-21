@@ -14,3 +14,4 @@ export const { MAIL_OWNER } = process.env;
 export const { MAIL_DOMAIN } = process.env;
 export const { AWS_S3_BUCKET } = process.env;
 export const { STORAGE_DRIVER } = process.env;
+export const { AWS_S3_BUCKET_URL } = process.env;
