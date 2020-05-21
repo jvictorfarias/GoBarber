@@ -5,7 +5,7 @@ import 'express-async-errors';
 import ora from 'ora';
 import cors from 'cors';
 import { errors } from 'celebrate';
-import uploadConfig from '@config/upload';
+import uploadConfig from '@config/storage';
 import AppError from '@shared/errors/AppError';
 import routes from './routes';
 

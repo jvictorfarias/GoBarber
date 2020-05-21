@@ -4,7 +4,7 @@ import { celebrate, Segments, Joi } from 'celebrate';
 
 import multer from 'multer';
 
-import uploadConfig from '@config/upload';
+import uploadConfig from '@config/storage';
 
 import ensureAuthentication from '../middlewares/EnsureAuthentication';
 

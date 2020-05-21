@@ -8,7 +8,7 @@ import IMailProvider from '../models/IMailProvider';
 import ISendMailDTO from '../dtos/ISendMailDTO';
 
 @injectable()
-class EtherealMailProvider implements IMailProvider {
+class SESMailProvider implements IMailProvider {
   private transporter: Transporter;
 
   private mailTemplateProvider: IMailTemplateProvider;
@@ -48,4 +48,4 @@ class EtherealMailProvider implements IMailProvider {
   }
 }
 
-export default EtherealMailProvider;
+export default SESMailProvider;
