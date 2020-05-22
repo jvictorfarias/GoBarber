@@ -17,13 +17,15 @@ class FakeCacheProvider implements ICacheProvider {
   }
 
   public async recover<T>(key: string): Promise<T | null> {
-    const data = await JSON.parse(this.cache[key]);
-
-    if (!data) {
+    try {
+      const data = JSON.parse(this.cache[key]);
+      if (!data) {
+        return null;
+      }
+      return data as T;
+    } catch {
       return null;
     }
-
-    return data as T;
   }
 
   public async invalidate(key: string): Promise<void> {

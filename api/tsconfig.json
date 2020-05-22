@@ -23,5 +23,11 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": [
+    "docs/*",
+    "coverage/*",
+    "jest.config.js",
+    "prettier.config.js"
+  ]
 }
