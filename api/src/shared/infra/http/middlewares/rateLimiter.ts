@@ -1,10 +1,10 @@
-import redis from 'redis';
+import { createClient } from 'redis';
 import { REDIS_HOST, REDIS_PORT, REDIS_PASS } from '@shared/utils/environment';
 import { Request, Response, NextFunction } from 'express';
 import { RateLimiterRedis } from 'rate-limiter-flexible';
 import AppError from '@shared/errors/AppError';
 
-const redisClient = redis.createClient({
+const redisClient = createClient({
   host: REDIS_HOST,
   port: Number(REDIS_PORT),
   password: REDIS_PASS || undefined,
