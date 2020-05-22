@@ -3,6 +3,8 @@ import { injectable, inject } from 'tsyringe';
 import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 
+import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
+
 interface IRequest {
   provider_id: string;
   day: number;
@@ -14,11 +16,17 @@ interface IRequest {
 class ListProviderMonthAvailabilityService {
   private appointmentsRepository: IAppointmentsRepository;
 
+  private cacheProvider: ICacheProvider;
+
   constructor(
     @inject('AppointmentsRepository')
     appointmentsRepository: IAppointmentsRepository,
+
+    @inject('CacheProvider')
+    cacheProvider: ICacheProvider,
   ) {
     this.appointmentsRepository = appointmentsRepository;
+    this.cacheProvider = cacheProvider;
   }
 
   public async execute({
@@ -35,6 +43,7 @@ class ListProviderMonthAvailabilityService {
         year,
       },
     );
+
     return appointments;
   }
 }

@@ -16,3 +16,8 @@ services:
     container_name: gobarber_mongo
     ports:
       - 27017:27017
+  gobarber_redis:
+    image: redis:alpine
+    container_name: gobarber_redis
+    ports:
+      - 6379:6379
