@@ -25,7 +25,7 @@
 Aplicação para agendar e gerenciar serviços de beleza, onde prestadores de serviços podem se cadastrar,
 e usuários poderão marcar agendamentos com estes provedores.
 
-## :fire: Pŕevia da Aplicação
+## :fire: Prévia da Aplicação
 
 <div align="center"> 
 <img src="https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif" alt="preview"/>
@@ -85,7 +85,7 @@ $ docker-compose up -d # Iniciará em background e não irá bloquear o shell
 $ yarn && yarn typeorm migration:run && yarn dev:server
 ```
 
-<a href="https://insomnia.rest/run/?label=gobarber-jvictorfarias&uri=https%3A%2F%2Fgithub.com%2Fjvictorfarias%2FGoBarber%2Fblob%2Fmaster%2Fapi%2FInsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+<a href="https://insomnia.rest/run/?label=gobarber-jvictorfarias&uri=https%3A%2F%2Fgithub.com%2Fjvictorfarias%2FGoBarber%2Fblob%2Fmaster%2Fapi%2Finsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 
 #### Iniciando o Frontend
 ```sh
