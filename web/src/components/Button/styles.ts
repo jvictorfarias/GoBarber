@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 import { shade } from 'polished';
 
+interface ButtonProps {
+  isLoading: boolean;
+}
+
 export const Container = styled.button`
   background: #ff9000;
   color: #312e38;
