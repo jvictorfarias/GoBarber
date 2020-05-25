@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiClock } from 'react-icons/fi';
 import Header from '../../components/Header';
@@ -8,10 +8,13 @@ import {
   Schedule,
   NextAppointment,
   Section,
+  Appointment,
   Calendar,
 } from './styles';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+
   return (
     <Container>
       <Header />
@@ -40,9 +43,65 @@ const Dashboard: React.FC = () => {
           </NextAppointment>
           <Section>
             <strong>Manhã</strong>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/6394522?s=460&u=fd39696a472492b5c59012836e08524f811a255a&v=4"
+                  alt="me"
+                />
+
+                <strong>Joao Victor</strong>
+              </div>
+            </Appointment>
+            <Appointment>
+              <span>
+                <FiClock />
+                09:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/6394522?s=460&u=fd39696a472492b5c59012836e08524f811a255a&v=4"
+                  alt="me"
+                />
+
+                <strong>Joao Victor</strong>
+              </div>
+            </Appointment>
           </Section>
           <Section>
             <strong>Tarde</strong>
+            <Appointment>
+              <span>
+                <FiClock />
+                13:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/6394522?s=460&u=fd39696a472492b5c59012836e08524f811a255a&v=4"
+                  alt="me"
+                />
+
+                <strong>Joao Victor</strong>
+              </div>
+            </Appointment>
+            <Appointment>
+              <span>
+                <FiClock />
+                14:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/6394522?s=460&u=fd39696a472492b5c59012836e08524f811a255a&v=4"
+                  alt="me"
+                />
+
+                <strong>Joao Victor</strong>
+              </div>
+            </Appointment>
           </Section>
         </Schedule>
         <Calendar />
