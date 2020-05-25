@@ -50,18 +50,6 @@ export const Content = styled.div`
       text-align: left;
     }
 
-    a {
-      color: #f4ede8;
-      display: block;
-      margin-top: 24px;
-      text-decoration: none;
-      transition: color 0.2s;
-
-      &:hover {
-        color: ${shade(0.2, '#f4ede8')};
-      }
-    }
-
     div:nth-child(5) {
       margin-top: 24px;
     }
