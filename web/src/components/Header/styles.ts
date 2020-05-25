@@ -50,7 +50,15 @@ export const Info = styled.div`
     color: #f4ede8;
   }
 
-  strong {
-    color: #ff9000;
+  a {
+    text-decoration: none;
+
+    strong {
+      color: #ff9000;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;

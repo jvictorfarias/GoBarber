@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { FiPower } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth';
 import logoImg from '../../assets/logo.svg';
 
@@ -18,7 +19,9 @@ const Header: React.FC = () => {
           <img src={user.avatar_url} alt={user.id} />
           <Info>
             <span>Bem-vindo(a), </span>
-            <strong>{user.name}</strong>
+            <Link to="/profile">
+              <strong>{user.name}</strong>
+            </Link>
           </Info>
         </Profile>
 
