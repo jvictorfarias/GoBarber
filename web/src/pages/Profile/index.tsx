@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, ChangeEvent } from 'react';
 
 import { FiArrowLeft, FiMail, FiLock, FiUser, FiCamera } from 'react-icons/fi';
 import { Form } from '@unform/web';
@@ -26,7 +26,7 @@ const Profile: React.FC = () => {
   const { addToast } = useToast();
   const history = useHistory();
 
-  const { user } = useAuth();
+  const { user, updateUser } = useAuth();
 
   const handleSubmit = useCallback(
     async (data: ProfileFormData) => {
@@ -68,6 +68,34 @@ const Profile: React.FC = () => {
     [addToast, history],
   );
 
+  const handleAvatarChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      if (event.target.files) {
+        const data = new FormData();
+
+        data.append('avatar', event.target.files[0]);
+
+        api
+          .patch('/users/avatar', data)
+          .then((response) => {
+            updateUser(response.data);
+
+            addToast({
+              type: 'success',
+              title: 'Avatar atualizado',
+            });
+          })
+          .catch(() => {
+            addToast({
+              type: 'error',
+              title: 'Erro ao atualizar avatar',
+            });
+          });
+      }
+    },
+    [addToast, updateUser],
+  );
+
   return (
     <Container>
       <Header>
@@ -78,12 +106,20 @@ const Profile: React.FC = () => {
         </div>
       </Header>
       <Content>
-        <Form ref={formRef} onSubmit={handleSubmit}>
+        <Form
+          initialData={{
+            name: user.name,
+            email: user.email,
+          }}
+          ref={formRef}
+          onSubmit={handleSubmit}
+        >
           <AvatarInput>
             <img src={user.avatar_url} alt={user.name} />
-            <button type="button">
+            <label htmlFor="avatar">
               <FiCamera />
-            </button>
+              <input type="file" id="avatar" onChange={handleAvatarChange} />
+            </label>
           </AvatarInput>
           <h1>Meu Perfil</h1>
 

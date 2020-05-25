@@ -62,7 +62,7 @@ export const Content = styled.div`
       }
     }
 
-    div:nth-child(4) {
+    div:nth-child(5) {
       margin-top: 24px;
     }
   }
@@ -78,7 +78,7 @@ export const AvatarInput = styled.div`
     border-radius: 50%;
   }
 
-  button {
+  label {
     position: absolute;
     width: 48px;
     height: 48px;
@@ -92,6 +92,14 @@ export const AvatarInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    input {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
 
     svg {
       width: 20px;
