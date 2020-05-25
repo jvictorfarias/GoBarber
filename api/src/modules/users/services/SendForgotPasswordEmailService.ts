@@ -53,7 +53,7 @@ class SendForgotPasswordEmailService {
         file: path.resolve(__dirname, '..', 'views', 'forgot_password.hbs'),
         variables: {
           name: user.name,
-          link: `${APP_WEB_URL}/reset_password?token=${token}`,
+          link: `${APP_WEB_URL}/reset-password?token=${token}`,
         },
       },
     });

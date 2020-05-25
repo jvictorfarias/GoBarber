@@ -21,11 +21,11 @@ profileRouter.put(
       email: Joi.string().required(),
       oldPassword: Joi.string(),
       password: Joi.string().when('oldPassword', {
-        is: Joi.string(),
+        is: String,
         then: Joi.string().required(),
       }),
       passwordConfirmation: Joi.string().when('oldPassword', {
-        is: Joi.string(),
+        is: String,
         then: Joi.string().required().valid(Joi.ref('password')),
       }),
     },
