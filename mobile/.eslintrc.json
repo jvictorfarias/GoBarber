@@ -28,6 +28,7 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/camelcase": "off",
     "prettier/prettier": "error",
     "no-unused-expressions": "off",
     "spaced-comment": "off",
