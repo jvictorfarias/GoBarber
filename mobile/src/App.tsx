@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <NavigationContainer>
       <StatusBar
         barStyle="light-content"
-        backgroundColor={user ? '#312e38' : '#28262e'}
+        backgroundColor={user ? '#28262e' : '#312e38'}
       />
       <AppProvider>
         <Routes />
