@@ -14,9 +14,7 @@ import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 import Icon from 'react-native-vector-icons/Feather';
 import getValidationErrors from '../../utils/getValidationErrors';
-
 import { useAuth } from '../../hooks/auth';
-
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 

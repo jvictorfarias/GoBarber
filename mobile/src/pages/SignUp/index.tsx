@@ -53,12 +53,6 @@ const SignUp: React.FC = () => {
 
         await api.post('/users', data);
 
-        // addToast({
-        //   type: 'success',
-        //   title: 'Cadastro realizado.',
-        //   description: 'Você já pode fazer o logon no GoBarber!',
-        // });
-
         Alert.alert(
           'Cadastro Realizado com Sucesso',
           'Você já pode fazer logon na aplicação.',
