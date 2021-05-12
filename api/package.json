@@ -25,7 +25,7 @@
     "mime": "^2.4.5",
     "mongodb": "^3.5.7",
     "multer": "^1.4.2",
-    "nodemailer": "^6.4.6",
+    "nodemailer": "^6.4.16",
     "ora": "^4.0.3",
     "pg": "^8.0.2",
     "rate-limiter-flexible": "^2.1.6",
