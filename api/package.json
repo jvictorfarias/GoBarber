@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "aws-sdk": "^2.681.0",
+    "aws-sdk": "^2.814.0",
     "bcryptjs": "^2.4.3",
     "celebrate": "^12.1.1",
     "class-transformer": "^0.2.3",
